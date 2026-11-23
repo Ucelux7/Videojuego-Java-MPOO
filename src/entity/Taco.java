@@ -11,10 +11,10 @@ import java.util.Random;
 public class Taco extends Entity {
 
     GamePanel gp;
-    BufferedImage taco1, taco2;
+    private BufferedImage taco1, taco2;
 
-    int actionLockCounter = 0;   // cada cuánto cambia de dirección cuando camina solo
-    boolean chasing = false;     // true si está persiguiendo al jugador
+    private int actionLockCounter = 0;   // cada cuánto cambia de dirección cuando camina solo
+    private boolean chasing = false;     // true si está persiguiendo al jugador
 
     public Taco(GamePanel gp) {
 
@@ -42,7 +42,7 @@ public class Taco extends Entity {
     }
 
     // Decide hacia dónde caminar
-    public void setAction() {
+    private void setAction() {
 
         int dx = gp.player.worldX - worldX;
         int dy = gp.player.worldY - worldY;
